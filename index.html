@@ -2,215 +2,127 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Buzzcut - Discover Your Next Hairstyle</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Custom CSS -->
     <style>
-        body {text-align: center;}
-        #enterDetails {float: left; width: 50%;  background-color: darkslategray; color: floralwhite;}
-        #findDetails {float: left; width: 50%; background-color: floralwhite; color: darkslategray;}
-        input {width: 120px;}
-        #canva-banner {
-            width: 100%;
-            height: auto;
+        body {
+            color: #333;
+            background-color: #fff;
+            font-family: 'Arial', sans-serif;
         }
-        .user-profile {
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin: 10px;
-            max-width: 300px;
-            margin: 0 auto;
+
+        .navbar, .footer {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .btn-primary {
+            background-color: #FF4136;
+            border-color: #FF4136;
+        }
+
+        .btn-primary:hover {
+            background-color: #E82C23;
+            border-color: #E82C23;
+        }
+
+        .main-heading {
+            color: #FF4136;
+            margin-bottom: 40px;
+        }
+
+        .app-description {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .screenshot {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            width: 100%;
+        }
+
+        .leaderboard-table {
+            margin-top: 20px;
         }
     </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
-    <div style="position: relative; width: 100%; height: 0; padding-top: 10%;
-        padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
-        border-radius: 8px; will-change: transform;">
-        <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-            src="https://www.canva.com/design/DAFwKPBeGFg/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
-        </iframe>
-    </div>
-    <a href="https://www.canva.com/design/DAFwKPBeGFg/view?utm_content=DAFwKPBeGFg&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">ANDREWGRAM</a> by Andrew Campbell
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">Buzzcut</a>
+    </nav>
 
-    <div id="enterDetails">
-        <h1>Enter details</h1>
+    <!-- Main Page Content -->
+    <div class="container mt-5">
+        <h1 class="main-heading">Welcome to Buzzcut</h1>
+        <p class="app-description">
+            Discover and share the latest trends in haircuts before you visit your barber. Buzzcut is the ultimate destination for finding your next hairstyle.
+        </p>
 
-        <h4>ID</h4> 
-        <input id="enterID" type="text"> 
+        <!-- Embed Thunkable App -->
+        <div class="embed-responsive embed-responsive-16by9 my-5">
+            <iframe class="embed-responsive-item" src="https://x.thunkable.com/projects/6543a67f2bf79041560eb5ec/9c1ecdcc-ae5e-4f66-80ff-3750b25475f4/designer" allowfullscreen></iframe>
+        </div>
+        <p>Try the Buzzcut app right here and start exploring the perfect haircut for you!</p>
 
-        <h4>Name</h4> 
-        <input id="enterName" type="text"> 
-
-        <h4>Age</h4> 
-        <input id="enterAge" type="number"> <br><br>
-
-        <button id="insert">INSERT</button>
-        <button id="update">UPDATE</button>
-        <button id="remove">REMOVE</button> <br><br>
-        <!-- ... rest of your form ... -->
-    </div>
-
-    <div id="findDetails">
-        <h1>Find by ID</h1>
-        <h4>ID</h4>
-        <input id="findID" type="text"> <br><br>
-        <button id="find">FIND</button>
-        <h3 id="findName" type="text"></h3>
-        <h3 id="findAge" type="number"></h3> <br><br>
-        <!-- ... rest of your form ... -->
-    </div>
-    <div id="user-profiles">
-        <!-- User profile 1 -->
-        <div class="user-profile" id="v0JSvyEhkAam5iFVhTJGXJnl9Uq1">
-            <!-- Display user data here -->
+        <!-- Screenshot from Google Play -->
+        <div class="text-center my-5">
+            <img src="LINK_TO_YOUR_GOOGLE_PLAY_SCREENSHOT" alt="Buzzcut on Google Play" class="screenshot">
         </div>
 
-        <!-- User profile 2 -->
-        <div class="user-profile" id="FoHI76r46pMUQp2iKvtXE0enoKO2">
-            <!-- Display user data here -->
+        <!-- Leaderboard Section -->
+        <div class="leaderboard">
+            <h2>Top Hairstyles</h2>
+            <table class="table leaderboard-table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">User</th>
+                        <th scope="col">Hairstyle</th>
+                        <th scope="col">Likes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dynamic rows populated from backend -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- User Documentation -->
+        <div class="user-docs my-5">
+            <h2>How to Use Buzzcut</h2>
+            <!-- Replace with your user-level documentation content -->
+            <p>Our user-friendly app makes it easy to navigate through different features. Check out the guide below:</p>
+            <img src="LINK_TO_YOUR_DOCUMENTATION_IMAGE" alt="Documentation Screenshot">
+            <!-- Include more images and GIFs as needed -->
+        </div>
+
+        <!-- Video Tutorial -->
+        <div class="video-tutorial my-5">
+            <h2>Video Guide</h2>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="LINK_TO_YOUR_VIDEO_TUTORIAL" allowfullscreen></iframe>
+            </div>
         </div>
     </div>
-    <div id="thunkable-app">
-        <iframe src="https://x.thunkable.com/copy/6fb5151e0b39e6ef44cbc982020353f1" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
-    </div>
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-analytics.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-      
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyA0Q9zDcifxXdcxammDZF_5Ux75-1EpmCQ",
-  authDomain: "profileapp-2b86c.firebaseapp.com",
-  databaseURL: "https://profileapp-2b86c-default-rtdb.firebaseio.com",
-  projectId: "profileapp-2b86c",
-  storageBucket: "profileapp-2b86c.appspot.com",
-  messagingSenderId: "890113555790",
-  appId: "1:890113555790:web:6864eb1639977615c5f21f",
-  measurementId: "G-2C95H93LMN"
-};
-            
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-   
-        import {getDatabase, ref, get, set, child, update, remove}
-        from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js"
-        
 
-        const db = getDatabase();
+    <!-- Footer -->
+    <footer class="footer py-3">
+        <div class="container">
+            <span>&copy; 2023 Buzzcut - Discover Your Next Hairstyle.</span>
+        </div>
+    </footer>
 
-        var enterID = document.querySelector("#enterID");
-        var enterName = document.querySelector("#enterName");
-        var enterAge = document.querySelector("#enterAge");
-        var findID = document.querySelector("#findID");
-        var findName = document.querySelector("#findName");
-        var findAge = document.querySelector("#findAge");
-      
-
-        var insertBtn = document.querySelector("#insert");
-        var updateBtn = document.querySelector("#update");
-        var removeBtn = document.querySelector("#remove");
-        var findBtn = document.querySelector("#find");
-
-        function InsertData() {
-            set(ref(db, "People/"+ enterID.value),{
-                Name: enterName.value,
-                ID: enterID.value,
-                Age: enterAge.value
-            })
-            .then(()=>{
-                alert("Data added successfully");
-            })
-            .catch((error)=>{
-                alert(error);
-            });
-        }
-
-        function FindData() {
-            const dbref = ref(db);
-
-            if (findID.value) {
-                get(child(dbref, "People/" + findID.value))
-                .then((snapshot)=>{
-                    if(snapshot.exists()){
-                        findName.innerHTML = "Name: " + snapshot.val().Name;
-                        findAge.innerHTML = "Age: " + snapshot.val().Age;
-                    } else {
-                        alert("No data found");
-                    }
-                })
-                .catch((error)=>{
-                    alert(error);
-                });
-            }
-        }
-
-        function UpdateData(){
-            update(ref(db, "People/"+ enterID.value),{
-                Name: enterName.value,
-                Age: enterAge.value
-            })
-            .then(()=>{
-                alert("Data updated successfully");
-            })
-            .catch((error)=>{
-                alert(error);
-            });
-        }
-
-        function RemoveData(){
-            remove(ref(db, "People/"+ enterID.value))
-            .then(()=>{
-                alert("Data deleted successfully");
-            })
-            .catch((error)=>{
-                alert(error);
-            });
-        }
-
-        insertBtn.addEventListener('click', InsertData);
-        updateBtn.addEventListener('click', UpdateData);
-        removeBtn.addEventListener('click', RemoveData);
-        findBtn.addEventListener('click', FindData);
-
-        // Hardcoded user IDs
-        const userIds = ['v0JSvyEhkAam5iFVhTJGXJnl9Uq1', 'FoHI76r46pMUQp2iKvtXE0enoKO2'];
-
-        // Function to display user profiles
-        function displayUserProfiles() {
-            userIds.forEach((userId, index) => {
-                const userDiv = document.querySelector(`#user${index + 1}`);
-                const userRef = child(ref(db, `People/${userId}`));
-                
-                get(userRef)
-                    .then((snapshot) => {
-                        if (snapshot.exists()) {
-                            const userData = snapshot.val();
-                            userDiv.innerHTML = `
-                                <h2>User Profile ${index + 1}</h2>
-                                <p>ID: ${userData.ID}</p>
-                                <p>Name: ${userData.Name}</p>
-                                <p>Age: ${userData.Age}</p>
-                            `;
-                        } else {
-                            userDiv.innerHTML = `<p>User ${index + 1} not found</p>`;
-                        }
-                    })
-                    .catch((error) => {
-                        console.error(error);
-                    });
-            });
-        }
-
-        // Call the function to display user profiles
-        displayUserProfiles();
-    </script>
+    <!-- Bootstrap JS and dependencies -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
